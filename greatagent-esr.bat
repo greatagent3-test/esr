@@ -2,7 +2,7 @@
 :: Main Batch File
    
 @echo off
-title greatagent-ga
+title greatagent-esr
 
 set PYTHONDONTWRITEBYTECODE=x
 cd /D "%~dp0"
