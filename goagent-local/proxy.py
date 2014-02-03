@@ -794,7 +794,7 @@ class DNSUtil(object):
                      '216.234.179.13',
                      '243.185.187.3',
                      '243.185.187.39'])
-    cndnsserver = ['114.114.114.114','114.114.115.115','114.114.114.119','114.114.115.119','114.114.114.110','114.114.115.110']
+    cndnsserver = ['114.114.114.114','114.114.115.115','114.114.114.119','114.114.115.119','114.114.114.110','114.114.115.110','1.2.4.8','210.2.4.8']
     max_retry = 3
     max_wait = 3
 
@@ -1537,7 +1537,7 @@ class Common(object):
             if name != 'google_cn' and name.startswith('google_') and len(resolved_iplist) < 32:
                 logging.info('local need_resolve_hosts=%s is too short, try remote_resolve', need_resolve_hosts)
                 need_resolve_remote += [x for x in need_resolve_hosts if ':' not in x and not re.match(r'\d+\.\d+\.\d+\.\d+', x)]
-            dnsservers = ['114.114.114.114', '114.114.115.115','8.8.8.8','8.8.4.4','198.41.0.4','192.228.79.201','192.33.4.12','128.8.10.90','192.203.230.10','192.5.5.241','192.112.36.4','128.63.2.53','192.36.148.17','192.58.128.30','193.0.14.129','199.7.83.42','202.12.27.33']
+            dnsservers = '1.2.4.8|210.2.4.8|114.114.114.114|114.114.115.115|8.8.8.8|8.8.4.4|208.67.222.222|208.67.220.220|198.153.192.1|198.153.194.1|202.181.224.2|168.95.192.1|168.95.1.1'.split('|')
             result_queue = Queue.Queue()
             for host in need_resolve_remote:
                 for dnsserver in dnsservers:
