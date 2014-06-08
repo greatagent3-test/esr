@@ -4,8 +4,12 @@ cd /D "%~dp0"
 :: Step2 - Start GoAgent
 echo Starting GoAgent...
 cd goagent-local
-rem python27.exe check_google_ip.py
-start goagent.exe
+ver | find "5.0." > NUL &&  start goagent.exe   
+ver | find "5.1." > NUL &&  start goagent.exe  
+ver | find "5.2." > NUL &&  start goagent.exe    
+ver | find "6.0." > NUL &&  start goagent.exe  
+ver | find "6.1." > NUL &&  start goagent.exe 
+ver | find "6.2." > NUL &&  start goagent-win8.exe
 cd..
 
 :: startfirefox.inc.bat
