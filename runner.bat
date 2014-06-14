@@ -10,6 +10,8 @@ ver | find "5.2." > NUL &&  start goagent.exe
 ver | find "6.0." > NUL &&  start goagent.exe  
 ver | find "6.1." > NUL &&  start goagent.exe 
 ver | find "6.2." > NUL &&  start goagent-win8.exe
+ver | find "6.3." > NUL &&  start goagent-win8.exe
+ver | find "7." > NUL &&  start goagent-win8.exe
 cd..
 
 :: startfirefox.inc.bat
